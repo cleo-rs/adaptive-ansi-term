@@ -1,17 +1,12 @@
 [package]
-authors = [
-    "ogham@bsago.me",
-    "Ryan Scheel (Havvy) <ryan.havvy@gmail.com>",
-    "Josh Triplett <josh@joshtriplett.org>",
-    "The Nushell Project Developers",
-]
+author = ["Emma Alexandria"]
 description = "Library for ANSI terminal colors and styles (bold, underline)"
 edition = "2021"
 rust-version = "1.62.1"
 license = "MIT"
-name = "nu-ansi-term"
-version = "0.50.0"
-repository = "https://github.com/nushell/nu-ansi-term"
+name = "adaptive-ansi-term"
+version = "0.50.1"
+repository = "https://github.com/cleo-rs/adaptive-ansi-term"
 
 [lib]
 doctest = true

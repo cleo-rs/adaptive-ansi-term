@@ -1,4 +1,4 @@
-use nu_ansi_term::Style;
+use adaptive_ansi_term::Style;
 
 #[test]
 fn manual_instance_style() {

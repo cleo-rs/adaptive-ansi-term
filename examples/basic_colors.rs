@@ -1,10 +1,10 @@
-use nu_ansi_term::{Color::*, Style};
+use adaptive_ansi_term::{Color::*, Style};
 
 // This example prints out the 16 basic colors.
 
 fn main() {
     #[cfg(windows)]
-    nu_ansi_term::enable_ansi_support().unwrap();
+    adaptive_ansi_term::enable_ansi_support().unwrap();
 
     let normal = Style::default();
 

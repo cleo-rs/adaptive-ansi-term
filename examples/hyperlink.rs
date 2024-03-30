@@ -1,10 +1,10 @@
-use nu_ansi_term::Color;
+use adaptive_ansi_term::Color;
 mod may_sleep;
 use may_sleep::{parse_cmd_args, sleep};
 
 fn main() {
     #[cfg(windows)]
-    nu_ansi_term::enable_ansi_support().unwrap();
+    adaptive_ansi_term::enable_ansi_support().unwrap();
 
     let sleep_ms = parse_cmd_args();
     let link = Color::Blue

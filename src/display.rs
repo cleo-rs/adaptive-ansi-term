@@ -45,7 +45,7 @@ where
 /// # Examples
 ///
 /// ```
-/// use nu_ansi_term::AnsiString;
+/// use adaptive_ansi_term::AnsiString;
 ///
 /// let plain_string = AnsiString::from("a plain string");
 /// let clone_string = plain_string.clone();
@@ -94,15 +94,15 @@ where
 /// # Examples
 ///
 /// ```
-/// use nu_ansi_term::AnsiString;
-/// use nu_ansi_term::Color::Red;
+/// use adaptive_ansi_term::AnsiString;
+/// use adaptive_ansi_term::Color::Red;
 ///
 /// let red_string = Red.paint("a red string");
 /// println!("{}", red_string);
 /// ```
 ///
 /// ```
-/// use nu_ansi_term::AnsiString;
+/// use adaptive_ansi_term::AnsiString;
 ///
 /// let plain_string = AnsiString::from("a plain string");
 /// ```
@@ -160,7 +160,7 @@ where
     /// # Examples
     ///
     /// ```
-    /// use nu_ansi_term::AnsiGenericString;
+    /// use adaptive_ansi_term::AnsiGenericString;
     /// let title_string = AnsiGenericString::title("My Title");
     /// println!("{}", title_string);
     /// ```
@@ -185,7 +185,7 @@ where
     /// # Examples
     ///
     /// ```
-    /// use nu_ansi_term::Color::Red;
+    /// use adaptive_ansi_term::Color::Red;
     ///
     /// let link_string = Red.paint("a red string").hyperlink("https://www.example.com");
     /// println!("{}", link_string);
@@ -261,7 +261,7 @@ impl Color {
     /// to get blue text.
     ///
     /// ```
-    /// use nu_ansi_term::Color::Blue;
+    /// use adaptive_ansi_term::Color::Blue;
     /// println!("{}", Blue.paint("da ba dee"));
     /// ```
     #[must_use]
