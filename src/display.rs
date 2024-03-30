@@ -145,6 +145,11 @@ where
         self.string.as_ref()
     }
 
+    ///Set the underlying string
+    pub fn set_str(&mut self, s: &S) {
+        self.string = Cow::Owned(s.to_owned());
+    }
+
     // Instances that imply wrapping in OSC sequences
     // and do not get displayed in the terminal text
     // area.
@@ -457,6 +462,14 @@ mod tests {
         let title = AnsiGenericString::title("Test Title");
         assert_eq!(title.clone().to_string(), "\x1B]2;Test Title\x1B\\");
         idempotent(title)
+    }
+
+    #[test]
+    fn set_str() {
+        let mut styled = Red.paint("This contains a newline \n");
+        styled.set_str(&styled.as_str().replace("\n", ""));
+
+        assert_eq!(styled.as_str(), "This contains a newline ")
     }
 
     #[test]

@@ -9,7 +9,7 @@
 /// let style = Style::new().bold().on(Color::Black);
 /// println!("{}", style.paint("Bold on black"));
 /// ```
-#[derive(Eq, PartialEq, Clone, Copy)]
+#[derive(Eq, PartialEq, Clone, Copy, Hash)]
 #[cfg_attr(
     feature = "derive_serde_style",
     derive(serde::Deserialize, serde::Serialize)
@@ -301,7 +301,7 @@ impl Default for Style {
 ///
 /// These use the standard numeric sequences.
 /// See <http://invisible-island.net/xterm/ctlseqs/ctlseqs.html>
-#[derive(Eq, PartialEq, Clone, Copy, Debug, Default)]
+#[derive(Eq, PartialEq, Clone, Copy, Debug, Default, Hash)]
 #[cfg_attr(
     feature = "derive_serde_style",
     derive(serde::Deserialize, serde::Serialize)
